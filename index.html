@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <title>Soma Compras Web</title>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style id="app-style"></style>
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+  <div id="app">
+
+    <div class="top-bar">
+      <ul>
+        <h1>Soma Compras Web</h1>
+        <li><a class="app-toogle" href="#">+</a></li>
+      </ul>
+    </div>
+
+    <div id="display">
+      <small id="display-money">💰 R$ 0,00<br>R$ 0,00</small>
+      <h1 id="display-value">R$ 0,00</h1>
+    </div>
+
+    <form id="form-add-item" class="no-print">
+      <input name="description" type="text" placeholder="Descrição" autocomplete="off">
+      <span>
+        <input name="amount" type="number" placeholder="Qtde." pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any">
+        <input name="price" type="number" placeholder="Preço" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any"
+          required>
+        <button>✔</button>
+      </span>
+    </form>
+
+    <div id="progressbar">
+      <div>
+        <p>0%</p>
+      </div>
+    </div>
+
+    <li id="sum-list"></li>
+
+  </div>
+
+  <form id="form-options" class="no-print">
+    <div id="close-options" class="app-toogle">✗</div>
+    <button id="btn-clear" class="wide-button">✗ Limpar todos os dados</button>
+    <input name="money-available" type="number" placeholder="💰 Dinheiro Disponível" pattern="[0-9]+([,\.][0-9]+)?"
+      min="0" step="any">
+    <textarea name="list-data" cols="30" rows="10" placeholder="Dados da lista em formato JSON"></textarea>
+    <select name="theme-name">
+      <option value="Dark">Dark</option>
+      <option value="Light">Light</option>
+    </select>
+    <button class="wide-button">✔ Salvar alterações</button>
+  </form>
+
+  <script src="js/script.js"></script>
+
+</body>
